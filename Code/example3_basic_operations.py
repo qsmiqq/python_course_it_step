@@ -11,5 +11,8 @@ d = 25
 # print(d // a)
 # print(d % a)
 #
-# print(a ** 2)
-# Task1
+# e = 144
+# print(e ** 0.5)
+
+a += 2
+print(a)
