@@ -1,8 +1,18 @@
+# a = int(float(input()))
+# print("Hello ", a)
+
+
 str_1 = "abc"
 str_2 = "cdef"
-# str_1 = str_1 + str_2
+s = 'text'
+s1 = """ text """
+s2 = 'don\'t'
+# print(s2)
+
+
+str_1 = str_1 + str_2
 # print(str_1, str_2, sep="-")
-# print(str_1, "\t", str_2)
+# print(str_1, "\n", str_2)
 
 
 
@@ -17,16 +27,30 @@ roman_nine = '\u2168'
 
 
 # docstring in action (__doc__)
+# def func():
+#     """
+#     This function do nothing
+#     :return: None
+#     """
+#     pass
+#
+# print(func.__doc__)
 
 
 # immutability mechanism
+a = "apple"
+b = "Apple"
+# print(a == b)
 
-# mylist = ["apple", "banana", "cherry"]
-#
-# b = mylist
-#
-# b.append(1)
+# print(a)
 # print(b)
+
+mylist = ["apple", "banana", "cherry"]
+#
+l = "mylist"
+#
+# l.append(1)
+# print(id(l))
 # print(mylist)
 
 
@@ -35,7 +59,7 @@ roman_nine = '\u2168'
 some_string = "I like Python"
 
 # print(some_string[2:])
-# print(some_string[0:6])
+# print(some_string[0:10:1])
 # print(some_string[-1])
 # print(some_string[-6:])
 # print(some_string[:])
@@ -46,9 +70,10 @@ some_string = "I like Python"
 
 str_3 = "IT-Step "
 str_4 = "Programming"
+str_5 = "1"
 
-# print(str_3 * 20)
-# print("Hello" * -1)
+# print(str_5 * 20)
+# print("Hello" * -1) # число должно быть положительным
 #
 # for i in str_4:
 #     print(i, end="")
@@ -60,12 +85,15 @@ str_4 = "Programming"
 # <<<FORMATTING>>>
 
 name = "Nikolai"
-# print('Hello, %s' % name)
+age = 30
+# template = 'Name: %s, Age: %d '
+# print(template % name, age)
 
-txt1 = "My name is {fname}, I'm {age}".format(fname="John", age=36)
+txt1 = "My name is {name}, I'm {age}".format(name=name, age=age)
 txt2 = "My name is {0}, I'm {1}".format("John", 36)
 txt3 = "My name is {}, I'm {}".format("John", 36)
 
+# print(txt2)
 # Use "_" to add a underscore character as a thousand separator:
 
 txt = "The universe is {:_} years old."
@@ -82,6 +110,13 @@ txt4 = "We have {:e} chickens."
 # print(txt3)
 
 # literals
+# PATH = r'C:\myfiles\filename'
+
+# print("text\n")
+# print(b'text\n')
+# print(type(b'text'))
+# print(r"text\n")
+# print("text\n")
 
 name_ = "John"
 surname = "Smith"
