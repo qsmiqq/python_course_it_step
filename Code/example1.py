@@ -38,5 +38,5 @@ l = ['Repositories', 'related', 'to', 'the', 'Python', 'Programming language']
 # print(text.swapcase())
 
 i = input().split()
-print(i)
+print(i[2])
 
