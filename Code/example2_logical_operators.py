@@ -4,7 +4,6 @@ c = "text"
 d = str()
 l = [False]
 
-
 # print(bool(a))
 # print(bool(b))
 # print(bool(c))
@@ -18,4 +17,11 @@ l = [False]
 #
 # print(0 or 100 or 2000)
 
-print(None and True or (None, False) and [False])
+# print(None and True or (None, False) and [False])
+
+"""Membership example"""
+
+text = "abcdefgpgn"
+list_ = [1, 2, "a", True]
+print("a" not in text)
+print(True in list_)

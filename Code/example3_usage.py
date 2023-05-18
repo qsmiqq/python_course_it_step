@@ -1,6 +1,26 @@
+# n = int(input())
+#
+# if 10 <= n <= 15:
+#     print("Ok")
+# elif n != 0:
+#     print("Not 0")
+# else:
+#     print("Zero")
+
+# n = 1
+# if n:
+#     b = 1
+# else:
+#     b = 0
+# if not n:
+#     print("Good")
+
+"""Ternary operator"""
+# b = 1 if n else 0
+
 """1"""
-if 1 and (0 or (1 and 0)):
-    print('first')
+# if 1 and (0 or (1 and 0)):
+#     print('first')
 
 
 """2"""
