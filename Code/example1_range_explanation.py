@@ -1,7 +1,12 @@
-my_range = range(1, 18, 3)
-print(type(my_range))
+my_range = range(10)
+l = "text"
+# for i in my_range:
+#     print(i)
+
+# print(dir(l))
+# print(type(my_range))
 # print(dir(my_range))
-#
+# __next__
 # print(my_range.start)
 # print(my_range.stop)
 # print(my_range.step)
