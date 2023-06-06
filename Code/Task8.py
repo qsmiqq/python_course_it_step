@@ -5,3 +5,13 @@
 Пример последовательности чисел для тестов
 1, -3, 5, -6, -10, 13
 """
+
+sum_ = 0
+nums = []
+while True:
+    i = int(input())
+    nums.append(i ** 2)
+    sum_ += i
+    if sum_ == 0:
+        break
+print(sum(nums))
