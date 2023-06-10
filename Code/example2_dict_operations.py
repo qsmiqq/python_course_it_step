@@ -7,22 +7,30 @@ d1 = {
     "four": 4
 }
 
-print(len(d))
+# print(len(d))
 
 # UNION
-d2 = d1 | d
-print(d2)
+d2 = d | d1
+d.update(d1)
+# print(d2)
+# print(d)
 
 # ITERATING
+# for key, value in d2.items():
+#     print(f'{key} -> {value}')
+#
+# for key in d2:
+#     print(key)
+#
+# for _, value in d2.items():
+#     print(value)
 
-students = {"name": "Nick", "age": 19, "course": "Python"}
+# Как достать значение?
 
-for i in students:
-    print(i)
+print(d2['one'])
+print(d2.get('one', {}))
 
-for i in students.values():
-    print(i)
 
-for key, value in students.items():
-    print(f"{key} -> {value}")
-
+d3 = {}
+d3.setdefault('a', 1)
+print(d3)
