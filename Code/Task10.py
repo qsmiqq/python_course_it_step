@@ -7,3 +7,11 @@
 a = ["a", "b", "c", "a", "a", "d", "c"]
 ['a', 'b', 'c', 'a_1', 'a_2', 'd', 'c_1']
 """
+a = ["a", "b", "c", "a", "a", "d", "c"]
+l = []
+
+for i, s in enumerate(a):
+    count = a[:i].count(s)
+    appendix = f'_{count}' if count else ''
+    l.append(f'{s}{appendix}')
+print(l)

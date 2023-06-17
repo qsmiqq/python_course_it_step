@@ -5,3 +5,17 @@
 d1 = {'a': 100, 'b': 200, 'c': 333}
 d2 = {'x': 300, 'y': 200, 'z': 777}
 """
+d1 = {'a': 100, 'b': 200, 'c': 333}
+d2 = {'x': 300, 'y': 200, 'z': 777}
+
+d2.update(d1)
+print(d2)
+d3 = dict()
+
+for key, value in d2.copy().items():
+    if value % 2 != 0:
+        k = d2.pop(key)
+        d3.setdefault(key, k)
+print(d3)
+print(sum(d2.values()))
+

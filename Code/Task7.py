@@ -7,6 +7,18 @@
 .1 9.12 .3 .2
 112.3
 
-131.32
+130.82
 """
 
+n = int(input())
+nums = list()
+
+while n:
+    num = input().split()
+    for i in num:
+        if i.startswith('.'):
+            nums.append(int(i.lstrip('.')))
+        else:
+            nums.append(float(i))
+    n -= 1
+print(sum(nums))
