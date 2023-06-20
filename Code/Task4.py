@@ -4,3 +4,6 @@
 Вход: abc312re542Ab
 Выход: abc312re54A
 """
+s = input()
+a = ''.join([l for l in s if s.count(l) == 1])
+print(a)

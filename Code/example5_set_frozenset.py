@@ -8,51 +8,59 @@ B = {4, 5, 6, 7, 8}
 # Output: {1, 2, 3, 4, 5, 6, 7, 8}
 print(A | B)
 print(A.union(B))
-
-
-# Intersection of sets
-# initialize A and B
-A = {1, 2, 3, 4, 5}
-B = {4, 5, 6, 7, 8}
-
-# use & operator
-# Output: {4, 5}
+#
+#
+# # Intersection of sets
+# # initialize A and B
+# A = {1, 2, 3, 4, 5}
+# B = {4, 5, 6, 7, 8}
+#
+# # use & operator
+# # Output: {4, 5}
 print(A & B)
 print(A.intersection(B))
-
-# Difference of two sets
-# initialize A and B
-A = {1, 2, 3, 4, 5}
-B = {4, 5, 6, 7, 8}
-
-# use - operator on A
-# Output: {1, 2, 3}
+#
+# # Difference of two sets
+# # initialize A and B
+# A = {1, 2, 3, 4, 5}
+# B = {4, 5, 6, 7, 8}
+#
+# # use - operator on A
+# # Output: {1, 2, 3}
 print(A - B)
-print(A.difference(B))
-
-
-# Frozensets
+print(B.difference(A))
+print(A ^ B)
+#
+#
+# # Frozensets
 person = {"name": "John", "age": 23, "sex": "male"}
-
+#
 fSet = frozenset(person)
 print('The frozen set is:', fSet)
-
-# initialize A and B
+#
+# # initialize A and B
 A = frozenset([1, 2, 3, 4])
 B = frozenset([3, 4, 5, 6])
-
-# copying a frozenset
+#
+# # copying a frozenset
 C = A.copy()  # Output: frozenset({1, 2, 3, 4})
 print(C)
-
-# union
+#
+# # union
 print(A.union(B))  # Output: frozenset({1, 2, 3, 4, 5, 6})
-
-# intersection
+#
+# # intersection
 print(A.intersection(B))  # Output: frozenset({3, 4})
-
-# difference
+#
+# # difference
 print(A.difference(B))  # Output: frozenset({1, 2})
-
-# symmetric_difference
+#
+# # symmetric_difference
 print(A.symmetric_difference(B))  # Output: frozenset({1, 2, 5, 6})
+
+D = {4, 5}
+E = {4, 5, 6, 7, 8}
+a = 4
+print(D.issubset(E))
+print(a in E)
+print(D.issuperset(E))

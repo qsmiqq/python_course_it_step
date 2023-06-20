@@ -7,3 +7,7 @@
       4 3 2
 Выход: 2 3
 """
+
+l1 = set(map(int, input().split()))
+l2 = set(map(int, input().split()))
+print(l1.intersection(l2))
