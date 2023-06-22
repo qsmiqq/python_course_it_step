@@ -30,3 +30,8 @@ user = {
         "term": "Annual"
     }
 }
+
+# {ключ: знач из словаря for ключ in список}
+
+data = {key: user.get(key) for key in input().split()}
+print(data)

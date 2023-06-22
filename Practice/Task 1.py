@@ -13,3 +13,8 @@ words_with_position = [('variation', 1),
                        ('competence', 4),
                        ('collapse', 5)]
 """
+
+words = ['variation', 'random', 'electronics', 'competence', 'collapse']
+
+words_with_position = [(word, num) for num, word in enumerate(words, start=1)]
+print(words_with_position)

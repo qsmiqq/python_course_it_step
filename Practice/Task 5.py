@@ -8,3 +8,13 @@ n!=1∗2∗3∗...∗n
 Вход: 4
 Выход: 24
 """
+n = int(input())
+i = 1
+res = 1
+if n == 1 or n == 0:
+    print(res)
+else:
+    while i <= n:
+        res *= i
+        i += 1
+    print(res)

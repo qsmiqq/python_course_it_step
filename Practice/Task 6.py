@@ -18,3 +18,26 @@
 Выход:
 Player 1
 """
+
+import random
+import time
+
+n = int(input())
+player1 = 0
+player2 = 0
+i = 0
+
+while i < n:
+    move1 = random.randint(1, 6)
+    move2 = random.randint(1, 6)
+    print(move1, move2)
+    time.sleep(1)
+    player1 += move1
+    player2 += move2
+    i += 1
+if player1 > player2:
+    print('Player 1')
+elif player2 > player1:
+    print('Player 2')
+else:
+    print('Draw!')
