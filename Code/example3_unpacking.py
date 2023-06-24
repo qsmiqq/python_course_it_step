@@ -1,15 +1,19 @@
-def add_mean(x, *data):
-    return x + sum(data)/float(len(data))
+def get_average(x, y, *data):
+    return x + y + sum(data)/ len(data) + 2
 
 
+print(get_average(2, 3, 5, 6, 7, 8))
 
-def handle_info(*person_info, **person_additional_info):
-    print(person_info[0], person_info[1],  person_additional_info["sex"], person_additional_info["friends"])
 
-person_info = ('Mike', 35)
-person_additional_info = {
-    'sex': 'male',
-    'friends': ('Kate',)
+def get_personal_info(*args, **kwargs):
+    print(args[0], args[1], kwargs.get('name'), kwargs.get('age'))
+
+
+person = ('Mike', 35)
+person_ = {
+    'name': 'John',
+    'surname': 'Connor',
+    'age': 15
 }
 
-handle_info(*person_info, **person_additional_info)
+get_personal_info(*person, **person_)

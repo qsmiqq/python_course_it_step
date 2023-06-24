@@ -4,3 +4,8 @@
 Выход: 5
 """
 
+def find_max(lst: list) -> int:
+    return max(lst)
+
+list_ = input().split()
+print(find_max(list_))
