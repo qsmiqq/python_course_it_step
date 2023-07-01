@@ -1,17 +1,28 @@
-lst = [1, 2, 3]
-
-lst.append(4)
-
-print(lst)
-
-out = lst.pop()
-print(out)
-print(lst)
+# def h():
+#     print(12)
 #
-lst.append(5)
-print(lst)
 #
-lst.pop()
-lst.pop()
-lst.pop()
-print(lst)
+# def f():
+#     g(h)
+#
+#
+# def g(a):
+#     a()
+#
+#
+# g(f)
+
+
+stack = []
+
+stack.append('module')
+stack.append('func_1')
+stack.append('print')
+
+print(stack)
+
+stack.pop()
+print(stack)
+stack.pop()
+print(stack)
+stack.pop()

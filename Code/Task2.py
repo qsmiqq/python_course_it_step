@@ -4,3 +4,10 @@
 count_args(1, 2, 3) => 3
 
 """
+
+
+def count_args(*args):
+    return len(args)
+
+
+print(count_args(1, 2, 3, 4, 8, 6))
