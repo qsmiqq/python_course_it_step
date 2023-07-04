@@ -18,12 +18,15 @@
 #     def inner():
 #         n = 25
 #         print(n)
+#         print(locals())
 #
 #     inner()
 #     print(n)
+#     print(locals())
 #
 #
 # outer()
+# print(locals())
 
 
 # -----------------------------
@@ -41,3 +44,19 @@
 #
 #
 # outer()
+
+# x = 'global'
+#
+#
+# def f1():
+#     x = 'enclosing'
+#
+#     def f2():
+#         nonlocal x
+#         x = 'inner'
+#         print(x)
+#
+#     f2()
+
+
+# f1()

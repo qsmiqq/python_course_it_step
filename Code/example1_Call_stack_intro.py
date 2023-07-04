@@ -12,17 +12,20 @@
 #
 # g(f)
 
+x = 1
 
-stack = []
 
-stack.append('module')
-stack.append('func_1')
-stack.append('print')
+GLOBAL = 99
 
-print(stack)
 
-stack.pop()
-print(stack)
-stack.pop()
-print(stack)
-stack.pop()
+def func(i):
+    global GLOBAL
+    GLOBAL = GLOBAL + i
+    return GLOBAL
+
+print(func(100))
+
+
+
+
+
