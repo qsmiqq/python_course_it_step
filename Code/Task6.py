@@ -4,4 +4,9 @@
 
 
 def calc_factorial(n: int) -> int:
-    pass
+    if n == 1:
+        return n
+    return n * calc_factorial(n - 1)
+
+
+print(calc_factorial(3))

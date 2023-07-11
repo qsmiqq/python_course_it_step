@@ -15,5 +15,5 @@ def func2(n: int):
         fun1(n - 5)
 
 
-fun1(20)
-# func2(20)
+#fun1(20)
+func2(20)
