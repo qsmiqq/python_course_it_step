@@ -3,3 +3,5 @@
 Для проверки решения присвойте вашу lambda функцию переменной average.
 """
 
+average = lambda *args: sum(args)/ len(args)
+print(average(5, 3, 8, 9))

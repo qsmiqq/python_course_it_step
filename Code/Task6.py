@@ -10,3 +10,17 @@
 
 Предполагается, что подобная последовательность остановится на числе 1 для любого начального натурального числа n.
 """
+
+def collatz(n: int):
+    if n == 1:
+        return 1
+    else:
+        if n % 2 == 0:
+            print(n, end=' ')
+            return collatz(int(n / 2))
+        else:
+            print(n, end=' ')
+            return collatz(int(n * 3 + 1))
+
+
+print(collatz(17))
