@@ -4,8 +4,10 @@ import sys
 
 # recursion
 def fact(i):
-    pass
+    if i == 1:
+        return i
+    return i * fact(i - 1)
 
 
 if __name__ == "__main__":
-    fact()
+    print(fact(int(sys.argv[1])))
