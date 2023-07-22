@@ -14,3 +14,17 @@ res = get_sum(1, 2, 3, 4, 5)
 print(res) # печатает 30
 """
 
+
+def double_it(func):
+    def wrapper(*args):
+        res = 2 * func(*args)
+        return res
+
+    return wrapper
+
+
+@double_it
+def multiply(num1, num2):
+    return num1 * num2
+
+print(multiply(3, 5))
