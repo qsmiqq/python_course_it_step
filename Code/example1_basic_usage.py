@@ -19,11 +19,11 @@ file = open('data/hello.txt', 'w')
 
 
 ### os.scandir
-
-import os
-
-with os.scandir(r"C:\Users\Kid\PycharmProjects\pythonProject1\Lesson14") as entries:
-    for entry in entries:
-        print(entry.name, "->", entry.stat().st_size, "bytes")
+#
+# import os
+#
+# with os.scandir(r"C:\Users\Kid\PycharmProjects\pythonProject1\Lesson14") as entries:
+#     for entry in entries:
+#         print(entry.name, "->", entry.stat().st_size, "bytes")
 
 
