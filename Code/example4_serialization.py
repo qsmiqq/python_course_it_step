@@ -7,10 +7,10 @@ import pickle
 
 l = ["a", 12, 23.5]
 
-with open('data.dat', 'wb') as file:
+with open('files/data.dat', 'wb') as file:
     pickle.dump(l, file)
 
-with open('data.dat', 'rb') as file:
+with open('files/data.dat', 'rb') as file:
     data = pickle.load(file)
     print(data)
 

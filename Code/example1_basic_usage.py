@@ -1,6 +1,9 @@
-file = open('data/hello.txt', 'w')
+import os
+
+#
 
 # try:
+#     file = open('data/hello.txt', 'w')
 #     print(file.read())
 # except Exception as error:
 #     print(error)
@@ -20,10 +23,10 @@ file = open('data/hello.txt', 'w')
 
 ### os.scandir
 #
-# import os
-#
-# with os.scandir(r"C:\Users\Kid\PycharmProjects\pythonProject1\Lesson14") as entries:
-#     for entry in entries:
-#         print(entry.name, "->", entry.stat().st_size, "bytes")
+
+
+with os.scandir(os.path.dirname(__file__)) as entries:
+    for entry in entries:
+        print(entry.name, "->", entry.stat().st_size, "bytes")
 
 
