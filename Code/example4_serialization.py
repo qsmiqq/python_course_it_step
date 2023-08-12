@@ -4,18 +4,19 @@
 '''
 
 import pickle
+import json
 
-l = ["a", 12, 23.5]
+data = dict(a="1", b="2", c="3")
+print(type(json.dumps(data)))
 
-with open('files/data.dat', 'wb') as file:
-    pickle.dump(l, file)
-
-with open('files/data.dat', 'rb') as file:
-    data = pickle.load(file)
-    print(data)
-
+with open('files/data.json', 'w') as file:
+    json.dump(data, file)
+#
+#     file.write(str(d))
 
 
+with open('files/data.json', 'rb') as file:
+    print(type(json.load(file)))
 
 
 
@@ -30,8 +31,8 @@ with open('files/data.dat', 'rb') as file:
 # data = ['abc', 123, 456.789]
 # with open(storage_file, 'wb') as file_storage:
 #     pickle.dump(data, file_storage)
-# del data
-#
-#
+# # del data
+# #
+# #
 # with open(storage_file, 'rb') as file_storage:
 #     print(pickle.load(file_storage))

@@ -7,6 +7,8 @@ import string
 import random
 
 
-
-
+letters = string.ascii_lowercase
+lst_letters = list(letters)
+random.shuffle(lst_letters)
+print((''.join(lst_letters[:26])))
 

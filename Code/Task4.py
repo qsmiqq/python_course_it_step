@@ -10,6 +10,12 @@ import csv
 import pickle
 import json
 
-
+with open('files/data.csv', 'r') as file:
+    reader = csv.reader(file)
+    for n, line in enumerate(reader):
+        if n == 0:
+            continue
+        else:
+            print(f'{line[0]}: {line[1]} -> {line[2]}')
 
 

@@ -13,6 +13,12 @@ LamborghiniLuxury Sports Cars1963-Present
 ToyotaMass-Market Cars1937-Present
 """
 
-l = []
 
+def read_last(lines: int, file):
+    with open(file, 'r') as f:
+        for elem in [car for car in f.readlines()][-lines:]:
+            print(elem.strip())
+
+
+read_last(3, 'files/cars.txt')
 

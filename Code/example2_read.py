@@ -1,33 +1,42 @@
 ### READ FILE
 
-# file = open('data/sh.txt', 'r', encoding='utf-8')
-# data = file.read()
-#
-# # print(data)
-# print(data[:100])
+# with open('files/text.txt', 'r') as file:
+#     res = file.read()
+#     print(res)
 
 
 ### READ LINE
 
-# file = open('data/sample.txt', 'r')
-# print(file.readline())
-# print(file.readline())
-# print(file.readline())
-# for line in range(10000):
+# with open('files/text.txt', 'rb') as file:
+#     print(type(file.readline()))
+#     print(file.readline().strip())
 #     print(file.readline())
-# file.close()
 
+
+# with open('files/text.txt', 'rb') as file:
+#     for i in range(30):
+#         print(file.readline())
 
 ### READ LINES
-# with open('data/sample.txt', 'r') as file:
-#     lines = file.readlines()
-#     for line in lines:
-#         if "?" in line:
-#             print(line)  # change char to ?
-# # file.close()
-# print(lines)
+# with open('files/text.txt', 'r') as file:
+#     data = file.readlines()
+#     print(data[1])
+#     for line in data:
+#         if '?' in line:
+#             print('Ok')
+#         else:
+#             print('Failed')
+
 
 ### SEEK/ TEll
+
+# with open('files/text.txt', 'r') as file:
+#     file.seek(4)
+#     print(file.seek(4))
+#     print(file.readline())
+#     print(file.tell())
+
+
 
 # file = open('data/hello.txt')
 # print(file.tell(), '- Start postion')
@@ -47,12 +56,5 @@
 
 ### READ PICTURES
 #
-# with open('data/dog.png', 'rb') as file:
-#     print(file.read(1))
-#     print(file.read(2))
-#     print(file.read(3))
-#     print(file.read(4))
-#     print(file.read(5))
-#     print(file.read(6))
-#     print(file.read(7))
-#     print(file.read(8))
+with open('files/dogy.avif', 'rb') as pic:
+    print(pic.readline(1))
