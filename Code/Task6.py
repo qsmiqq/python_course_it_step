@@ -9,3 +9,17 @@ hel
 hell
 hello
 """
+
+
+def file_n_lines(file_name: str, n: int) -> None:
+    with open(file_name, 'r') as file:
+        for _ in range(n):
+            print(file.readline().strip())
+
+
+# file_n_lines('files/hello.txt', 3)
+
+def file_n_lines_(file_name: str, n: int):
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+        return lines[:n+1]

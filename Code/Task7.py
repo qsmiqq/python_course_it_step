@@ -10,3 +10,16 @@
 4
 5
 """
+
+
+def create_file_with_numbers(n):
+    file = 'range_{}.txt'
+    with open(file.format(n), 'w') as f:
+        for i in range(1, n + 1):
+            f.write(str(i) + '\n')
+
+
+# create_file_with_numbers(5)
+
+with open('range_6.txt', 'w') as f_:
+    f_.writelines([str(i) + '\n' for i in range(1, 6)])

@@ -7,8 +7,11 @@ import string
 import random
 
 
-letters = string.ascii_lowercase
-lst_letters = list(letters)
-random.shuffle(lst_letters)
-print((''.join(lst_letters[:26])))
+letters = list(string.ascii_lowercase)
+random.shuffle(letters)
+random_string = ''.join(letters[:26])
+
+with open('files/random_string.txt', 'a') as file:
+    file.write(random_string + '\n')
+
 

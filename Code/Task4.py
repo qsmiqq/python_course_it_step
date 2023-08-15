@@ -11,11 +11,18 @@ import pickle
 import json
 
 with open('files/data.csv', 'r') as file:
-    reader = csv.reader(file)
-    for n, line in enumerate(reader):
-        if n == 0:
-            continue
-        else:
-            print(f'{line[0]}: {line[1]} -> {line[2]}')
+    reader = csv.DictReader(file)
+    people = []
+    for line in reader:
+        people.append(line)
+
+# with open('files/data.dat', 'wb') as pickle_file:
+#     pickle.dump(people, pickle_file)
+#
+# with open('files/data.dat', 'rb') as pickle_file:
+#     data = pickle.load(pickle_file)
 
 
+with open('files/data.json', 'w') as json_file:
+    json.dump(people, json_file)
+# print(data)

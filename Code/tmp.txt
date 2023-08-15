@@ -1,0 +1,1 @@
+{"Arthur": 83, "Kate": 95, "Alice": 80, "Mike": 34}
