@@ -1,20 +1,8 @@
 """
-Написать класс автомобиля с атрибутами марки, цвета и объема двигателя и
-методами: ехать вперед и ехать назад.
-
-Все методы - это просто команда печати, например print(“Drive forward”)
+Написать класс TextLoader, который имеет приватным атрибутом text_processor объект класса, что
+был создан в задаче 1. Новый класс будет иметь приватный атрибут clean_string и публичный метод
+set_clean_text, который будет вызывать метод класса TextProcessor через свой атрибут text_processor и
+записывать значение в clean_string. Сам же атрибут clean_string будет иметь property с
+дополнительным выводом в консоль того, что выводится уже очищенная строка
 """
-
-
-class Car:
-    def __init__(self, brand, colour, vol):
-        self.brand = brand
-        self.colour = colour
-        self.vol = vol
-
-    def ride_forward(self):
-        return f'{self.brand} rides forward'
-
-    def ride_backward(self):
-        return f'{self.brand} rides backward'
 
