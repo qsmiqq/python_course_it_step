@@ -5,38 +5,33 @@ Change different access properties to see what's happen.
 
 
 class User:
-    def __init__(self, name):
+    def __init__(self, name, age):
         self.__name = name
+        self.__age = age
 
     @property
     def name(self):
         return self.__name
 
-    @name.setter
-    def name(self, name):
-        self.__name = name
+    def set_name(self, name_):
+        self.__name = name_
 
-    @name.getter
-    def name(self):
-        return self.__name
+    def __return_age(self):
+        return self.__age
 
-
-user = User("John")
-# print(user.__name)
-# print(user._User__name)
-# user.name = "Bob"
-print(user.name)
-
-
-
-class User2:
-    def __init__(self, name):
-        self.__name = name
+    def get_info(self):
+        return "Current user: {}, {} years".format(self.get_name(), self.__return_age())
 
     def get_name(self):
         return self.__name
 
-    def set_name(self, name):
-        self.__name = name
 
-    property(get_name, set_name)
+user1 = User("User1", 25)
+print(user1.name)
+# print(user1.__name)
+# print(User.__ind)
+# print(User._User__ind)
+user1.set_name("User2")
+print(user1.get_name())
+print(user1.get_info())
+

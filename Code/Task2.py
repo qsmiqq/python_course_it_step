@@ -1,8 +1,25 @@
 """
-Написать класс TextLoader, который имеет приватным атрибутом text_processor объект класса, что
-был создан в задаче 1. Новый класс будет иметь приватный атрибут clean_string и публичный метод
-set_clean_text, который будет вызывать метод класса TextProcessor через свой атрибут text_processor и
-записывать значение в clean_string. Сам же атрибут clean_string будет иметь property с
-дополнительным выводом в консоль того, что выводится уже очищенная строка
+Modify previous class with property decorator on salary attr
 """
 
+
+class Worker:
+    SALARY_MAP = {
+        "A": 1000,
+        "B": 500,
+        "C": 300
+    }
+
+    def __init__(self, worker_class):
+        self.__salary = self.__get_salary(worker_class)
+
+    @property
+    def salary(self):
+        return self.__salary
+
+    def __get_salary(self, class_):
+        return self.SALARY_MAP.get(class_, 0)
+
+
+worker = Worker("A")
+print(worker.salary)
