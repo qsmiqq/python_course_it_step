@@ -36,7 +36,15 @@ class D(C, B):
 
 
 d = D()
-print(D.__mro__)
+
+
+def print_mro(T):
+    print(*[c.__name__ for c in T.mro()], sep=' -> ')
+
+# a = "test"
+print_mro(D)
+# print(D.__mro__)
 print(issubclass(D, C))
+# print(isinstance(a, int))
 print(issubclass(D, B))
 print(issubclass(B, D))

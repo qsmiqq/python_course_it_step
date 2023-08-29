@@ -10,4 +10,47 @@
 
 
 class BaseCar:
-    pass
+    def __init__(self, brand, color, vol):
+        self.brand = brand
+        self.color = color
+        self.vol = vol
+
+    def move_forward(self):
+        return f"The car {self.brand} is moving forward"
+
+    def move_backward(self):
+        return f"The car {self.brand} is moving backward"
+
+
+class Car(BaseCar):
+    def __init__(self, brand, color, vol):
+        super().__init__(brand, color, vol)
+
+    def turn_right(self):
+        return f"The car {self.brand} is turning right"
+
+    def turn_left(self):
+        return f"The car {self.brand} is turning left"
+
+
+class Plane:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def take_off(self):
+        return f"{self.brand} is taking off"
+
+
+class PlaneCar(Car, Plane):
+    def __init__(self, brand, color, vol):
+        Car.__init__(self, brand, color, vol)
+        Plane.__init__(self, brand)
+
+
+car = Car("Ford", "blue", 1.6)
+print(car.move_backward())
+plane = Plane("Embraer")
+print(plane.take_off())
+
+what_are_you = PlaneCar("smth", "red", 3.5)
+print(what_are_you.take_off())
