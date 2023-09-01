@@ -4,5 +4,20 @@
 
 """
 
+
 class Animal:
-    pass
+    def __init__(self, name):
+        self.name = name
+
+    def voice(self):
+        if self.name == "Dog":
+            return "Bark!"
+        elif self.name == "Cat":
+            return "Meow"
+
+
+cat = Animal("Cat")
+dog = Animal("Dog")
+
+print(cat.voice())
+print(dog.voice())
