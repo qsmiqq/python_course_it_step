@@ -52,6 +52,7 @@ class Hero(BaseUnit):
         super().__init__()
         self.__name = name
         self.__team = team
+        self.__level = 0
 
     @property
     def team(self):
