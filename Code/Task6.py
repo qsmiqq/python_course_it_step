@@ -10,3 +10,27 @@ class Loggable:
         print(str(time.ctime()) + ": " + str(msg))
 
 """
+
+import time
+
+
+class Loggable:
+
+    def log(self, msg):
+        """Class for logging"""
+        print(str(time.ctime()) + ": " + str(msg))
+
+
+class LoggableList(list, Loggable):
+    def __init__(self):
+        super().__init__()
+
+    def append(self, __object) -> None:
+        self.log(f"Append object {__object}")
+
+
+lst = LoggableList()
+lst.append(1)
+lst.append(2)
+lst.append(3)
+lst.append("test")
